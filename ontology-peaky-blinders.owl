@@ -8,7 +8,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontology="http://peakyblinders.com/ontology#">
     <owl:Ontology rdf:about="http://peakyblinders.com/ontology">
-        <rdfs:comment xml:lang="en">Title: Peaky Blinders Ontology
+        <rdfs:comment xml:lang="en">Title: Peaky Blinders TV Show Ontology
 Developed by: Perales Molas, Pablo</rdfs:comment>
     </owl:Ontology>
     
