@@ -1,0 +1,1154 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://peakyblinders.com/ontology#"
+     xml:base="http://peakyblinders.com/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:ontology="http://peakyblinders.com/ontology#">
+    <owl:Ontology rdf:about="http://peakyblinders.com/ontology">
+        <rdfs:comment xml:lang="en">Title: Peaky Blinders Ontology
+Developed by: Perales Molas, Pablo</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://peakyblinders.com/ontology#belongsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#belongsTo">
+        <owl:inverseOf rdf:resource="http://peakyblinders.com/ontology#cities"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#City"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Country"/>
+        <rdfs:comment xml:lang="en">City belongs to country.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#childOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#childOf">
+        <owl:inverseOf rdf:resource="http://peakyblinders.com/ontology#parentOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:comment xml:lang="en">Animal is child of animal.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#cities -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#cities">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Country"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#City"/>
+        <rdfs:comment xml:lang="en">Country has city.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#episodes -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#episodes">
+        <owl:inverseOf rdf:resource="http://peakyblinders.com/ontology#season"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Season"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Episode"/>
+        <rdfs:comment xml:lang="en">Season has episode.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#habitants -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#habitants">
+        <owl:inverseOf rdf:resource="http://peakyblinders.com/ontology#livesIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Location"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:comment xml:lang="en">Location has animal.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#hiddenIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#hiddenIn">
+        <owl:inverseOf rdf:resource="http://peakyblinders.com/ontology#hides"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Object"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Object"/>
+        <rdfs:comment xml:lang="en">Object is hidden in object.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#hides -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#hides">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Object"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Object"/>
+        <rdfs:comment xml:lang="en">Object hides object.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#livesIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#livesIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Location"/>
+        <rdfs:comment xml:lang="en">Animal lives in location.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#marriedTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#marriedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Person"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Person"/>
+        <rdfs:comment xml:lang="en">Person is married to person.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#memberOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#memberOf">
+        <owl:inverseOf rdf:resource="http://peakyblinders.com/ontology#members"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Mobster"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Mob"/>
+        <rdfs:comment xml:lang="en">Mobster is member of mob.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#members -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#members">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Mob"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Mobster"/>
+        <rdfs:comment xml:lang="en">Mob has mobster.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#parentOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#parentOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:comment xml:lang="en">Animal is parent of animal.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#playedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#playedBy">
+        <owl:inverseOf rdf:resource="http://peakyblinders.com/ontology#plays"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Character"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Actor"/>
+        <rdfs:comment xml:lang="en">Character is played by actor.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#plays -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#plays">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Actor"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Character"/>
+        <rdfs:comment xml:lang="en">Actor plays character.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#riddenBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#riddenBy">
+        <owl:inverseOf rdf:resource="http://peakyblinders.com/ontology#rides"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#RideableAnimal"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Person"/>
+        <rdfs:comment xml:lang="en">Rideable animal is ridden by person.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#rides -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#rides">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Person"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#RideableAnimal"/>
+        <rdfs:comment xml:lang="en">Person rides rideable animal.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#season -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#season">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Episode"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Season"/>
+        <rdfs:comment xml:lang="en">Episode is part of season.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#seasons -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#seasons">
+        <owl:inverseOf rdf:resource="http://peakyblinders.com/ontology#televisionShow"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#TelevisionShow"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Season"/>
+        <rdfs:comment xml:lang="en">Television show has season.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#siblingOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#siblingOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:comment xml:lang="en">Animal is sibling of animal.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#starring -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#starring">
+        <owl:inverseOf rdf:resource="http://peakyblinders.com/ontology#stars"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Actor"/>
+        <rdfs:comment xml:lang="en">Work has actor.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#stars -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#stars">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Actor"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work"/>
+        <rdfs:comment xml:lang="en">Actor stars in work.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#televisionShow -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#televisionShow">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Season"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#TelevisionShow"/>
+        <rdfs:comment xml:lang="en">Season is part of television show.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#wears -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#wears">
+        <owl:inverseOf rdf:resource="http://peakyblinders.com/ontology#wornBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Dressing"/>
+        <rdfs:comment xml:lang="en">Animal wears dressing.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#wornBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://peakyblinders.com/ontology#wornBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Dressing"/>
+        <rdfs:range rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:comment xml:lang="en">Dressing is worn by animal.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://peakyblinders.com/ontology#isFinished -->
+
+
+    <owl:DatatypeProperty rdf:about="http://peakyblinders.com/ontology#isFinished">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#TelevisionShow"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates if a work is finished or not.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#length -->
+
+
+    <owl:DatatypeProperty rdf:about="http://peakyblinders.com/ontology#length">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Blade"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:comment xml:lang="en">Indicates the length of an object in cm.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#yearOfBirth -->
+
+
+    <owl:DatatypeProperty rdf:about="http://peakyblinders.com/ontology#yearOfBirth">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Indicates the year of birth of an animal.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Actor -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Actor">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#Artist"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#plays"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Character"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#stars"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A person whose profession is acting on the stage, in films, or on television.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Animal -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Animal">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#childOf"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#livesIn"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#parentOf"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#siblingOf"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#wears"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Dressing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#childOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A living organism that feeds on organic matter.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Artist -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Artist">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#Person"/>
+        <rdfs:comment xml:lang="en">A person who creates paintings or drawings as a profession or hobby.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Blade -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Blade">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#Weapon"/>
+        <rdfs:comment xml:lang="en">The flat cutting edge of a knife, saw, or other tool or weapon.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Cap -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Cap">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#Dressing"/>
+        <rdfs:comment xml:lang="en">A kind of soft, flat hat, typically with a peak.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Character -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Character">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#playedBy"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A person in a novel, play, or film.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#City -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#City">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#belongsTo"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#belongsTo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://peakyblinders.com/ontology#Country"/>
+        <rdfs:comment xml:lang="en">A large town.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Country -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Country">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#cities"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#cities"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A nation with its own government, occupying a particular territory.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Dressing -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Dressing">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#wornBy"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#wornBy"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://peakyblinders.com/ontology#Weapon"/>
+        <rdfs:comment xml:lang="en">A piece of tissue used to cover things.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Episode -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Episode">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#season"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Season"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#season"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#Season"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Each of the separate instalments into which a serialized story or radio or television programme is divided.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Horse -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Horse">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#RideableAnimal"/>
+        <rdfs:comment xml:lang="en">A large plant-eating domesticated mammal with solid hoofs and a flowing mane and tail, used for riding, racing, and to carry and pull loads.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Location -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Location">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#habitants"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A particular place or position.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Mob -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Mob">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#members"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Mobster"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#members"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#Mobster"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The Mafia or a similar criminal organization.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Mobster -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Mobster">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#memberOf"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Mob"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#memberOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#Mob"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A member of an organized group of violent criminals; a gangster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Object -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Object">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#hiddenIn"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#hides"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A material thing that can be seen and touched.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Person -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Person">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#marriedTo"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#rides"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#RideableAnimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#rides"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#RideableAnimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://peakyblinders.com/ontology#RideableAnimal"/>
+        <rdfs:comment xml:lang="en">A human being regarded as an individual.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#RideableAnimal -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#RideableAnimal">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#Animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#riddenBy"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#riddenBy"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An animal that can be ridden by a person.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Season -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Season">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#episodes"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Episode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#televisionShow"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#TelevisionShow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#episodes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#Episode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#televisionShow"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#TelevisionShow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A set or sequence of related television programmes; a series.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#TelevisionShow -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#TelevisionShow">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#seasons"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Season"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#seasons"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#Season"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Any content produced for viewing on a television set.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Weapon -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology#Weapon">
+        <rdfs:subClassOf rdf:resource="http://peakyblinders.com/ontology#Object"/>
+        <rdfs:comment xml:lang="en">A thing designed or used for inflicting bodily harm or physical damage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work -->
+
+
+    <owl:Class rdf:about="http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#starring"/>
+                <owl:someValuesFrom rdf:resource="http://peakyblinders.com/ontology#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://peakyblinders.com/ontology#starring"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://peakyblinders.com/ontology#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The artistic production of a particular author, composer, or artist, regarded collectively.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Cillian_Murphy -->
+
+
+    <owl:NamedIndividual rdf:about="http://peakyblinders.com/ontology#Cillian_Murphy">
+        <rdf:type rdf:resource="http://peakyblinders.com/ontology#Actor"/>
+        <plays rdf:resource="http://peakyblinders.com/ontology#Thomas_Shelby"/>
+        <stars rdf:resource="http://peakyblinders.com/ontology#Peaky_Blinders"/>
+        <yearOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1976</yearOfBirth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#John_Shelby -->
+
+
+    <owl:NamedIndividual rdf:about="http://peakyblinders.com/ontology#John_Shelby">
+        <rdf:type rdf:resource="http://peakyblinders.com/ontology#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Peaky_Blinders -->
+
+
+    <owl:NamedIndividual rdf:about="http://peakyblinders.com/ontology#Peaky_Blinders">
+        <rdf:type rdf:resource="http://peakyblinders.com/ontology#TelevisionShow"/>
+        <starring rdf:resource="http://peakyblinders.com/ontology#Cillian_Murphy"/>
+        <isFinished rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isFinished>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Thomas_Shelby -->
+
+
+    <owl:NamedIndividual rdf:about="http://peakyblinders.com/ontology#Thomas_Shelby">
+        <rdf:type rdf:resource="http://peakyblinders.com/ontology#Character"/>
+        <rdf:type rdf:resource="http://peakyblinders.com/ontology#Mobster"/>
+        <memberOf rdf:resource="http://peakyblinders.com/ontology#Peaky_Blinders&apos;s_Mob"/>
+        <playedBy rdf:resource="http://peakyblinders.com/ontology#Cillian_Murphy"/>
+        <siblingOf rdf:resource="http://peakyblinders.com/ontology#John_Shelby"/>
+        <wears rdf:resource="http://peakyblinders.com/ontology#Thomas&apos;s_Cap"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Peaky_Blinders&apos;s_Mob -->
+
+
+    <owl:NamedIndividual rdf:about="http://peakyblinders.com/ontology#Peaky_Blinders&apos;s_Mob">
+        <rdf:type rdf:resource="http://peakyblinders.com/ontology#Mob"/>
+        <members rdf:resource="http://peakyblinders.com/ontology#Thomas_Shelby"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Thomas&apos;s_Blade -->
+
+
+    <owl:NamedIndividual rdf:about="http://peakyblinders.com/ontology#Thomas&apos;s_Blade">
+        <rdf:type rdf:resource="http://peakyblinders.com/ontology#Blade"/>
+        <hiddenIn rdf:resource="http://peakyblinders.com/ontology#Thomas&apos;s_Cap"/>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</length>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://peakyblinders.com/ontology#Thomas&apos;s_Cap -->
+
+
+    <owl:NamedIndividual rdf:about="http://peakyblinders.com/ontology#Thomas&apos;s_Cap">
+        <rdf:type rdf:resource="http://peakyblinders.com/ontology#Cap"/>
+        <hides rdf:resource="http://peakyblinders.com/ontology#Thomas&apos;s_Blade"/>
+        <wornBy rdf:resource="http://peakyblinders.com/ontology#Thomas_Shelby"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://peakyblinders.com/ontology#Animal"/>
+            <rdf:Description rdf:about="http://peakyblinders.com/ontology#Episode"/>
+            <rdf:Description rdf:about="http://peakyblinders.com/ontology#Location"/>
+            <rdf:Description rdf:about="http://peakyblinders.com/ontology#Mob"/>
+            <rdf:Description rdf:about="http://peakyblinders.com/ontology#Object"/>
+            <rdf:Description rdf:about="http://peakyblinders.com/ontology#Season"/>
+            <rdf:Description rdf:about="http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#z">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://peakyblinders.com/ontology#hiddenIn"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://peakyblinders.com/ontology#hiddenIn"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://peakyblinders.com/ontology#hiddenIn"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://peakyblinders.com/ontology#hides"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://peakyblinders.com/ontology#hides"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://peakyblinders.com/ontology#hides"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://peakyblinders.com/ontology#siblingOf"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://peakyblinders.com/ontology#siblingOf"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://peakyblinders.com/ontology#siblingOf"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
