@@ -1,0 +1,707 @@
+<http://peakyblinders.com/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://peakyblinders.com/ontology> <http://www.w3.org/2000/01/rdf-schema#comment> "Title: Peaky Blinders Ontology\nDeveloped by: Perales Molas, Pablo"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://peakyblinders.com/ontology#belongsTo
+<http://peakyblinders.com/ontology#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#belongsTo> <http://www.w3.org/2002/07/owl#inverseOf> <http://peakyblinders.com/ontology#cities> .
+<http://peakyblinders.com/ontology#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://peakyblinders.com/ontology#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#City> .
+<http://peakyblinders.com/ontology#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Country> .
+<http://peakyblinders.com/ontology#belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "City belongs to country."@en .
+# 
+# http://peakyblinders.com/ontology#childOf
+<http://peakyblinders.com/ontology#childOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#childOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://peakyblinders.com/ontology#parentOf> .
+<http://peakyblinders.com/ontology#childOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#childOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#childOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#childOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#childOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Animal is child of animal."@en .
+# 
+# http://peakyblinders.com/ontology#cities
+<http://peakyblinders.com/ontology#cities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#cities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://peakyblinders.com/ontology#cities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#cities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#cities> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Country> .
+<http://peakyblinders.com/ontology#cities> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#City> .
+<http://peakyblinders.com/ontology#cities> <http://www.w3.org/2000/01/rdf-schema#comment> "Country has city."@en .
+# 
+# http://peakyblinders.com/ontology#episodes
+<http://peakyblinders.com/ontology#episodes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#episodes> <http://www.w3.org/2002/07/owl#inverseOf> <http://peakyblinders.com/ontology#season> .
+<http://peakyblinders.com/ontology#episodes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://peakyblinders.com/ontology#episodes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#episodes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#episodes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Season> .
+<http://peakyblinders.com/ontology#episodes> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Episode> .
+<http://peakyblinders.com/ontology#episodes> <http://www.w3.org/2000/01/rdf-schema#comment> "Season has episode."@en .
+# 
+# http://peakyblinders.com/ontology#habitants
+<http://peakyblinders.com/ontology#habitants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#habitants> <http://www.w3.org/2002/07/owl#inverseOf> <http://peakyblinders.com/ontology#livesIn> .
+<http://peakyblinders.com/ontology#habitants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#habitants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#habitants> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Location> .
+<http://peakyblinders.com/ontology#habitants> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#habitants> <http://www.w3.org/2000/01/rdf-schema#comment> "Location has animal."@en .
+# 
+# http://peakyblinders.com/ontology#hiddenIn
+<http://peakyblinders.com/ontology#hiddenIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#hiddenIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://peakyblinders.com/ontology#hides> .
+<http://peakyblinders.com/ontology#hiddenIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#hiddenIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#hiddenIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Object> .
+<http://peakyblinders.com/ontology#hiddenIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Object> .
+<http://peakyblinders.com/ontology#hiddenIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Object is hidden in object."@en .
+# 
+# http://peakyblinders.com/ontology#hides
+<http://peakyblinders.com/ontology#hides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#hides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#hides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#hides> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Object> .
+<http://peakyblinders.com/ontology#hides> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Object> .
+<http://peakyblinders.com/ontology#hides> <http://www.w3.org/2000/01/rdf-schema#comment> "Object hides object."@en .
+# 
+# http://peakyblinders.com/ontology#livesIn
+<http://peakyblinders.com/ontology#livesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#livesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#livesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#livesIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#livesIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Location> .
+<http://peakyblinders.com/ontology#livesIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Animal lives in location."@en .
+# 
+# http://peakyblinders.com/ontology#marriedTo
+<http://peakyblinders.com/ontology#marriedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#marriedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://peakyblinders.com/ontology#marriedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#marriedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Person> .
+<http://peakyblinders.com/ontology#marriedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Person> .
+<http://peakyblinders.com/ontology#marriedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Person is married to person."@en .
+# 
+# http://peakyblinders.com/ontology#memberOf
+<http://peakyblinders.com/ontology#memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#memberOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://peakyblinders.com/ontology#members> .
+<http://peakyblinders.com/ontology#memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Mobster> .
+<http://peakyblinders.com/ontology#memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Mob> .
+<http://peakyblinders.com/ontology#memberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Mobster is member of mob."@en .
+# 
+# http://peakyblinders.com/ontology#members
+<http://peakyblinders.com/ontology#members> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#members> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#members> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#members> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Mob> .
+<http://peakyblinders.com/ontology#members> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Mobster> .
+<http://peakyblinders.com/ontology#members> <http://www.w3.org/2000/01/rdf-schema#comment> "Mob has mobster."@en .
+# 
+# http://peakyblinders.com/ontology#parentOf
+<http://peakyblinders.com/ontology#parentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#parentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#parentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#parentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#parentOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#parentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Animal is parent of animal."@en .
+# 
+# http://peakyblinders.com/ontology#playedBy
+<http://peakyblinders.com/ontology#playedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#playedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://peakyblinders.com/ontology#plays> .
+<http://peakyblinders.com/ontology#playedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#playedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Character> .
+<http://peakyblinders.com/ontology#playedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Actor> .
+<http://peakyblinders.com/ontology#playedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Character is played by actor."@en .
+# 
+# http://peakyblinders.com/ontology#plays
+<http://peakyblinders.com/ontology#plays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#plays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#plays> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Actor> .
+<http://peakyblinders.com/ontology#plays> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Character> .
+<http://peakyblinders.com/ontology#plays> <http://www.w3.org/2000/01/rdf-schema#comment> "Actor plays character."@en .
+# 
+# http://peakyblinders.com/ontology#riddenBy
+<http://peakyblinders.com/ontology#riddenBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#riddenBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://peakyblinders.com/ontology#rides> .
+<http://peakyblinders.com/ontology#riddenBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://peakyblinders.com/ontology#riddenBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://peakyblinders.com/ontology#riddenBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#riddenBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#riddenBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#RideableAnimal> .
+<http://peakyblinders.com/ontology#riddenBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Person> .
+<http://peakyblinders.com/ontology#riddenBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Rideable animal is ridden by person."@en .
+# 
+# http://peakyblinders.com/ontology#rides
+<http://peakyblinders.com/ontology#rides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#rides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://peakyblinders.com/ontology#rides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://peakyblinders.com/ontology#rides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#rides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#rides> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Person> .
+<http://peakyblinders.com/ontology#rides> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#RideableAnimal> .
+<http://peakyblinders.com/ontology#rides> <http://www.w3.org/2000/01/rdf-schema#comment> "Person rides rideable animal."@en .
+# 
+# http://peakyblinders.com/ontology#season
+<http://peakyblinders.com/ontology#season> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#season> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://peakyblinders.com/ontology#season> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#season> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#season> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Episode> .
+<http://peakyblinders.com/ontology#season> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Season> .
+<http://peakyblinders.com/ontology#season> <http://www.w3.org/2000/01/rdf-schema#comment> "Episode is part of season."@en .
+# 
+# http://peakyblinders.com/ontology#seasons
+<http://peakyblinders.com/ontology#seasons> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#seasons> <http://www.w3.org/2002/07/owl#inverseOf> <http://peakyblinders.com/ontology#televisionShow> .
+<http://peakyblinders.com/ontology#seasons> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://peakyblinders.com/ontology#seasons> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#seasons> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#seasons> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#TelevisionShow> .
+<http://peakyblinders.com/ontology#seasons> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Season> .
+<http://peakyblinders.com/ontology#seasons> <http://www.w3.org/2000/01/rdf-schema#comment> "Television show has season."@en .
+# 
+# http://peakyblinders.com/ontology#siblingOf
+<http://peakyblinders.com/ontology#siblingOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#siblingOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://peakyblinders.com/ontology#siblingOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#siblingOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#siblingOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#siblingOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Animal is sibling of animal."@en .
+# 
+# http://peakyblinders.com/ontology#starring
+<http://peakyblinders.com/ontology#starring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#starring> <http://www.w3.org/2002/07/owl#inverseOf> <http://peakyblinders.com/ontology#stars> .
+<http://peakyblinders.com/ontology#starring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#starring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#starring> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work> .
+<http://peakyblinders.com/ontology#starring> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Actor> .
+<http://peakyblinders.com/ontology#starring> <http://www.w3.org/2000/01/rdf-schema#comment> "Work has actor."@en .
+# 
+# http://peakyblinders.com/ontology#stars
+<http://peakyblinders.com/ontology#stars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#stars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#stars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#stars> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Actor> .
+<http://peakyblinders.com/ontology#stars> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work> .
+<http://peakyblinders.com/ontology#stars> <http://www.w3.org/2000/01/rdf-schema#comment> "Actor stars in work."@en .
+# 
+# http://peakyblinders.com/ontology#televisionShow
+<http://peakyblinders.com/ontology#televisionShow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#televisionShow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://peakyblinders.com/ontology#televisionShow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#televisionShow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#televisionShow> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Season> .
+<http://peakyblinders.com/ontology#televisionShow> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#TelevisionShow> .
+<http://peakyblinders.com/ontology#televisionShow> <http://www.w3.org/2000/01/rdf-schema#comment> "Season is part of television show."@en .
+# 
+# http://peakyblinders.com/ontology#wears
+<http://peakyblinders.com/ontology#wears> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#wears> <http://www.w3.org/2002/07/owl#inverseOf> <http://peakyblinders.com/ontology#wornBy> .
+<http://peakyblinders.com/ontology#wears> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://peakyblinders.com/ontology#wears> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#wears> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#wears> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#wears> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Dressing> .
+<http://peakyblinders.com/ontology#wears> <http://www.w3.org/2000/01/rdf-schema#comment> "Animal wears dressing."@en .
+# 
+# http://peakyblinders.com/ontology#wornBy
+<http://peakyblinders.com/ontology#wornBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://peakyblinders.com/ontology#wornBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://peakyblinders.com/ontology#wornBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://peakyblinders.com/ontology#wornBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://peakyblinders.com/ontology#wornBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Dressing> .
+<http://peakyblinders.com/ontology#wornBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#wornBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Dressing is worn by animal."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://peakyblinders.com/ontology#isFinished
+<http://peakyblinders.com/ontology#isFinished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://peakyblinders.com/ontology#isFinished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://peakyblinders.com/ontology#isFinished> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#TelevisionShow> .
+<http://peakyblinders.com/ontology#isFinished> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://peakyblinders.com/ontology#isFinished> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates if a work is finished or not."@en .
+# 
+# http://peakyblinders.com/ontology#length
+<http://peakyblinders.com/ontology#length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://peakyblinders.com/ontology#length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://peakyblinders.com/ontology#length> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Blade> .
+<http://peakyblinders.com/ontology#length> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
+<http://peakyblinders.com/ontology#length> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the length of an object in cm."@en .
+# 
+# http://peakyblinders.com/ontology#yearOfBirth
+<http://peakyblinders.com/ontology#yearOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://peakyblinders.com/ontology#yearOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://peakyblinders.com/ontology#yearOfBirth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#yearOfBirth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://peakyblinders.com/ontology#yearOfBirth> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the year of birth of an animal."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://peakyblinders.com/ontology#Actor
+<http://peakyblinders.com/ontology#Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#Artist> .
+<http://peakyblinders.com/ontology#Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Character> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#plays> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#stars> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Actor> <http://www.w3.org/2000/01/rdf-schema#comment> "A person whose profession is acting on the stage, in films, or on television."@en .
+# 
+# http://peakyblinders.com/ontology#Animal
+<http://peakyblinders.com/ontology#Animal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Animal> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#childOf> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Location> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#livesIn> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Animal> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#parentOf> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Animal> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#siblingOf> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Dressing> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#wears> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Animal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#Animal> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#childOf> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Animal> <http://www.w3.org/2000/01/rdf-schema#comment> "A living organism that feeds on organic matter."@en .
+# 
+# http://peakyblinders.com/ontology#Artist
+<http://peakyblinders.com/ontology#Artist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Artist> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#Person> .
+<http://peakyblinders.com/ontology#Artist> <http://www.w3.org/2000/01/rdf-schema#comment> "A person who creates paintings or drawings as a profession or hobby."@en .
+# 
+# http://peakyblinders.com/ontology#Blade
+<http://peakyblinders.com/ontology#Blade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Blade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#Weapon> .
+<http://peakyblinders.com/ontology#Blade> <http://www.w3.org/2000/01/rdf-schema#comment> "The flat cutting edge of a knife, saw, or other tool or weapon."@en .
+# 
+# http://peakyblinders.com/ontology#Cap
+<http://peakyblinders.com/ontology#Cap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Cap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#Dressing> .
+<http://peakyblinders.com/ontology#Cap> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of soft, flat hat, typically with a peak."@en .
+# 
+# http://peakyblinders.com/ontology#Character
+<http://peakyblinders.com/ontology#Character> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Character> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#Person> .
+<http://peakyblinders.com/ontology#Character> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Actor> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#playedBy> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Character> <http://www.w3.org/2000/01/rdf-schema#comment> "A person in a novel, play, or film."@en .
+# 
+# http://peakyblinders.com/ontology#City
+<http://peakyblinders.com/ontology#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#Location> .
+<http://peakyblinders.com/ontology#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Country> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#belongsTo> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#Country> .
+_:genid11 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#belongsTo> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#City> <http://www.w3.org/2002/07/owl#disjointWith> <http://peakyblinders.com/ontology#Country> .
+<http://peakyblinders.com/ontology#City> <http://www.w3.org/2000/01/rdf-schema#comment> "A large town."@en .
+# 
+# http://peakyblinders.com/ontology#Country
+<http://peakyblinders.com/ontology#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#Location> .
+<http://peakyblinders.com/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#City> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#cities> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#City> .
+_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#cities> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "A nation with its own government, occupying a particular territory."@en .
+# 
+# http://peakyblinders.com/ontology#Dressing
+<http://peakyblinders.com/ontology#Dressing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Dressing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#Object> .
+<http://peakyblinders.com/ontology#Dressing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Animal> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#wornBy> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Dressing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#Animal> .
+_:genid15 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#wornBy> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Dressing> <http://www.w3.org/2002/07/owl#disjointWith> <http://peakyblinders.com/ontology#Weapon> .
+<http://peakyblinders.com/ontology#Dressing> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of tissue used to cover things."@en .
+# 
+# http://peakyblinders.com/ontology#Episode
+<http://peakyblinders.com/ontology#Episode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Episode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Season> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#season> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Episode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#Season> .
+_:genid17 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#season> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Episode> <http://www.w3.org/2000/01/rdf-schema#comment> "Each of the separate instalments into which a serialized story or radio or television programme is divided."@en .
+# 
+# http://peakyblinders.com/ontology#Horse
+<http://peakyblinders.com/ontology#Horse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Horse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#RideableAnimal> .
+<http://peakyblinders.com/ontology#Horse> <http://www.w3.org/2000/01/rdf-schema#comment> "A large plant-eating domesticated mammal with solid hoofs and a flowing mane and tail, used for riding, racing, and to carry and pull loads."@en .
+# 
+# http://peakyblinders.com/ontology#Location
+<http://peakyblinders.com/ontology#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Animal> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#habitants> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A particular place or position."@en .
+# 
+# http://peakyblinders.com/ontology#Mob
+<http://peakyblinders.com/ontology#Mob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Mob> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Mobster> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#members> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Mob> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#Mobster> .
+_:genid20 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#members> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Mob> <http://www.w3.org/2000/01/rdf-schema#comment> "The Mafia or a similar criminal organization."@en .
+# 
+# http://peakyblinders.com/ontology#Mobster
+<http://peakyblinders.com/ontology#Mobster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Mobster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#Person> .
+<http://peakyblinders.com/ontology#Mobster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Mob> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#memberOf> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Mobster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#Mob> .
+_:genid22 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#memberOf> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Mobster> <http://www.w3.org/2000/01/rdf-schema#comment> "A member of an organized group of violent criminals; a gangster."@en .
+# 
+# http://peakyblinders.com/ontology#Object
+<http://peakyblinders.com/ontology#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Object> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#hiddenIn> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Object> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#hides> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Object> <http://www.w3.org/2000/01/rdf-schema#comment> "A material thing that can be seen and touched."@en .
+# 
+# http://peakyblinders.com/ontology#Person
+<http://peakyblinders.com/ontology#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Person> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#marriedTo> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#RideableAnimal> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#rides> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#RideableAnimal> .
+_:genid27 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#rides> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Person> <http://www.w3.org/2002/07/owl#disjointWith> <http://peakyblinders.com/ontology#RideableAnimal> .
+<http://peakyblinders.com/ontology#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A human being regarded as an individual."@en .
+# 
+# http://peakyblinders.com/ontology#RideableAnimal
+<http://peakyblinders.com/ontology#RideableAnimal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#RideableAnimal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#Animal> .
+<http://peakyblinders.com/ontology#RideableAnimal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Person> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#riddenBy> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#RideableAnimal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#Person> .
+_:genid29 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#riddenBy> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#RideableAnimal> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal that can be ridden by a person."@en .
+# 
+# http://peakyblinders.com/ontology#Season
+<http://peakyblinders.com/ontology#Season> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Season> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Episode> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#episodes> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Season> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#TelevisionShow> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#televisionShow> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Season> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#Episode> .
+_:genid32 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#episodes> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Season> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#TelevisionShow> .
+_:genid33 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#televisionShow> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#Season> <http://www.w3.org/2000/01/rdf-schema#comment> "A set or sequence of related television programmes; a series."@en .
+# 
+# http://peakyblinders.com/ontology#TelevisionShow
+<http://peakyblinders.com/ontology#TelevisionShow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#TelevisionShow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work> .
+<http://peakyblinders.com/ontology#TelevisionShow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Season> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#seasons> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#TelevisionShow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#Season> .
+_:genid35 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#seasons> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology#TelevisionShow> <http://www.w3.org/2000/01/rdf-schema#comment> "Any content produced for viewing on a television set."@en .
+# 
+# http://peakyblinders.com/ontology#Weapon
+<http://peakyblinders.com/ontology#Weapon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology#Weapon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://peakyblinders.com/ontology#Object> .
+<http://peakyblinders.com/ontology#Weapon> <http://www.w3.org/2000/01/rdf-schema#comment> "A thing designed or used for inflicting bodily harm or physical damage."@en .
+# 
+# http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work
+<http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://peakyblinders.com/ontology#Actor> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#starring> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#onClass> <http://peakyblinders.com/ontology#Actor> .
+_:genid37 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://peakyblinders.com/ontology#starring> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work> <http://www.w3.org/2000/01/rdf-schema#comment> "The artistic production of a particular author, composer, or artist, regarded collectively."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://peakyblinders.com/ontology#Cillian_Murphy
+<http://peakyblinders.com/ontology#Cillian_Murphy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://peakyblinders.com/ontology#Cillian_Murphy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://peakyblinders.com/ontology#Actor> .
+<http://peakyblinders.com/ontology#Cillian_Murphy> <http://peakyblinders.com/ontology#plays> <http://peakyblinders.com/ontology#Thomas_Shelby> .
+<http://peakyblinders.com/ontology#Cillian_Murphy> <http://peakyblinders.com/ontology#stars> <http://peakyblinders.com/ontology#Peaky_Blinders> .
+<http://peakyblinders.com/ontology#Cillian_Murphy> <http://peakyblinders.com/ontology#yearOfBirth> "1976"^^<http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://peakyblinders.com/ontology#John_Shelby
+<http://peakyblinders.com/ontology#John_Shelby> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://peakyblinders.com/ontology#John_Shelby> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://peakyblinders.com/ontology#Character> .
+# 
+# http://peakyblinders.com/ontology#Peaky_Blinders
+<http://peakyblinders.com/ontology#Peaky_Blinders> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://peakyblinders.com/ontology#Peaky_Blinders> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://peakyblinders.com/ontology#TelevisionShow> .
+<http://peakyblinders.com/ontology#Peaky_Blinders> <http://peakyblinders.com/ontology#starring> <http://peakyblinders.com/ontology#Cillian_Murphy> .
+<http://peakyblinders.com/ontology#Peaky_Blinders> <http://peakyblinders.com/ontology#isFinished> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://peakyblinders.com/ontology#Thomas_Shelby
+<http://peakyblinders.com/ontology#Thomas_Shelby> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://peakyblinders.com/ontology#Thomas_Shelby> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://peakyblinders.com/ontology#Character> .
+<http://peakyblinders.com/ontology#Thomas_Shelby> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://peakyblinders.com/ontology#Mobster> .
+<http://peakyblinders.com/ontology#Thomas_Shelby> <http://peakyblinders.com/ontology#memberOf> <http://peakyblinders.com/ontology#Peaky_Blinders's_Mob> .
+<http://peakyblinders.com/ontology#Thomas_Shelby> <http://peakyblinders.com/ontology#playedBy> <http://peakyblinders.com/ontology#Cillian_Murphy> .
+<http://peakyblinders.com/ontology#Thomas_Shelby> <http://peakyblinders.com/ontology#siblingOf> <http://peakyblinders.com/ontology#John_Shelby> .
+<http://peakyblinders.com/ontology#Thomas_Shelby> <http://peakyblinders.com/ontology#wears> <http://peakyblinders.com/ontology#Thomas's_Cap> .
+# 
+# http://peakyblinders.com/ontology#Peaky_Blinders's_Mob
+<http://peakyblinders.com/ontology#Peaky_Blinders's_Mob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://peakyblinders.com/ontology#Peaky_Blinders's_Mob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://peakyblinders.com/ontology#Mob> .
+<http://peakyblinders.com/ontology#Peaky_Blinders's_Mob> <http://peakyblinders.com/ontology#members> <http://peakyblinders.com/ontology#Thomas_Shelby> .
+# 
+# http://peakyblinders.com/ontology#Thomas's_Blade
+<http://peakyblinders.com/ontology#Thomas's_Blade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://peakyblinders.com/ontology#Thomas's_Blade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://peakyblinders.com/ontology#Blade> .
+<http://peakyblinders.com/ontology#Thomas's_Blade> <http://peakyblinders.com/ontology#hiddenIn> <http://peakyblinders.com/ontology#Thomas's_Cap> .
+<http://peakyblinders.com/ontology#Thomas's_Blade> <http://peakyblinders.com/ontology#length> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+# 
+# http://peakyblinders.com/ontology#Thomas's_Cap
+<http://peakyblinders.com/ontology#Thomas's_Cap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://peakyblinders.com/ontology#Thomas's_Cap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://peakyblinders.com/ontology#Cap> .
+<http://peakyblinders.com/ontology#Thomas's_Cap> <http://peakyblinders.com/ontology#hides> <http://peakyblinders.com/ontology#Thomas's_Blade> .
+<http://peakyblinders.com/ontology#Thomas's_Cap> <http://peakyblinders.com/ontology#wornBy> <http://peakyblinders.com/ontology#Thomas_Shelby> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid38 <http://www.w3.org/2002/07/owl#members> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://peakyblinders.com/ontology#Season> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://peakyblinders.com/ontology#Object> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://peakyblinders.com/ontology#Mob> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://peakyblinders.com/ontology#Location> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://peakyblinders.com/ontology#Episode> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://peakyblinders.com/ontology#Animal> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#x> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#z> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid46 <http://www.w3.org/2003/11/swrl#body> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid48 .
+_:genid48 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#z> .
+_:genid48 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#y> .
+_:genid48 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://peakyblinders.com/ontology#hiddenIn> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid50 .
+_:genid50 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#y> .
+_:genid50 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> .
+_:genid50 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://peakyblinders.com/ontology#hiddenIn> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid46 <http://www.w3.org/2003/11/swrl#head> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid52 .
+_:genid52 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#z> .
+_:genid52 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> .
+_:genid52 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://peakyblinders.com/ontology#hiddenIn> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid53 <http://www.w3.org/2003/11/swrl#body> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid55 .
+_:genid55 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#z> .
+_:genid55 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#y> .
+_:genid55 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://peakyblinders.com/ontology#hides> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid57 .
+_:genid57 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#y> .
+_:genid57 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> .
+_:genid57 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://peakyblinders.com/ontology#hides> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid53 <http://www.w3.org/2003/11/swrl#head> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid59 .
+_:genid59 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#z> .
+_:genid59 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> .
+_:genid59 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://peakyblinders.com/ontology#hides> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid60 <http://www.w3.org/2003/11/swrl#body> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid62 .
+_:genid62 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#z> .
+_:genid62 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#y> .
+_:genid62 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://peakyblinders.com/ontology#siblingOf> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid64 .
+_:genid64 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#y> .
+_:genid64 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> .
+_:genid64 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://peakyblinders.com/ontology#siblingOf> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid60 <http://www.w3.org/2003/11/swrl#head> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid66 .
+_:genid66 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#z> .
+_:genid66 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> .
+_:genid66 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://peakyblinders.com/ontology#siblingOf> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
