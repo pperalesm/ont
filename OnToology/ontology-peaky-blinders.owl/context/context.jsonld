@@ -1,0 +1,181 @@
+{
+  "@context" : {
+    "belongsTo" : {
+      "@id" : "http://peakyblinders.com/ontology#belongsTo",
+      "@type" : "@id"
+    },
+    "RideableAnimal" : {
+      "@id" : "http://peakyblinders.com/ontology#RideableAnimal"
+    },
+    "Country" : {
+      "@id" : "http://peakyblinders.com/ontology#Country"
+    },
+    "season" : {
+      "@id" : "http://peakyblinders.com/ontology#season",
+      "@type" : "@id"
+    },
+    "members" : {
+      "@id" : "http://peakyblinders.com/ontology#members",
+      "@type" : "@id"
+    },
+    "Object" : {
+      "@id" : "http://peakyblinders.com/ontology#Object"
+    },
+    "episodes" : {
+      "@id" : "http://peakyblinders.com/ontology#episodes",
+      "@type" : "@id"
+    },
+    "Artist" : {
+      "@id" : "http://peakyblinders.com/ontology#Artist"
+    },
+    "livesIn" : {
+      "@id" : "http://peakyblinders.com/ontology#livesIn",
+      "@type" : "@id"
+    },
+    "plays" : {
+      "@id" : "http://peakyblinders.com/ontology#plays",
+      "@type" : "@id"
+    },
+    "Character" : {
+      "@id" : "http://peakyblinders.com/ontology#Character"
+    },
+    "parentOf" : {
+      "@id" : "http://peakyblinders.com/ontology#parentOf",
+      "@type" : "@id"
+    },
+    "Location" : {
+      "@id" : "http://peakyblinders.com/ontology#Location"
+    },
+    "Weapon" : {
+      "@id" : "http://peakyblinders.com/ontology#Weapon"
+    },
+    "Episode" : {
+      "@id" : "http://peakyblinders.com/ontology#Episode"
+    },
+    "Animal" : {
+      "@id" : "http://peakyblinders.com/ontology#Animal"
+    },
+    "Blade" : {
+      "@id" : "http://peakyblinders.com/ontology#Blade"
+    },
+    "Person" : {
+      "@id" : "http://peakyblinders.com/ontology#Person"
+    },
+    "Dressing" : {
+      "@id" : "http://peakyblinders.com/ontology#Dressing"
+    },
+    "seasons" : {
+      "@id" : "http://peakyblinders.com/ontology#seasons",
+      "@type" : "@id"
+    },
+    "Actor" : {
+      "@id" : "http://peakyblinders.com/ontology#Actor"
+    },
+    "yearOfBirth" : {
+      "@id" : "http://peakyblinders.com/ontology#yearOfBirth",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "wears" : {
+      "@id" : "http://peakyblinders.com/ontology#wears",
+      "@type" : "@id"
+    },
+    "playedBy" : {
+      "@id" : "http://peakyblinders.com/ontology#playedBy",
+      "@type" : "@id"
+    },
+    "marriedTo" : {
+      "@id" : "http://peakyblinders.com/ontology#marriedTo",
+      "@type" : "@id"
+    },
+    "hides" : {
+      "@id" : "http://peakyblinders.com/ontology#hides",
+      "@type" : "@id"
+    },
+    "wornBy" : {
+      "@id" : "http://peakyblinders.com/ontology#wornBy",
+      "@type" : "@id"
+    },
+    "TelevisionShow" : {
+      "@id" : "http://peakyblinders.com/ontology#TelevisionShow"
+    },
+    "rides" : {
+      "@id" : "http://peakyblinders.com/ontology#rides",
+      "@type" : "@id"
+    },
+    "stars" : {
+      "@id" : "http://peakyblinders.com/ontology#stars",
+      "@type" : "@id"
+    },
+    "Work" : {
+      "@id" : "http://peakyblinders.com/ontology/www.semanticweb.org/eniac/ontologies/2022/3/untitled-ontology-5#Work"
+    },
+    "siblingOf" : {
+      "@id" : "http://peakyblinders.com/ontology#siblingOf",
+      "@type" : "@id"
+    },
+    "televisionShow" : {
+      "@id" : "http://peakyblinders.com/ontology#televisionShow",
+      "@type" : "@id"
+    },
+    "Mobster" : {
+      "@id" : "http://peakyblinders.com/ontology#Mobster"
+    },
+    "length" : {
+      "@id" : "http://peakyblinders.com/ontology#length",
+      "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
+    },
+    "Mob" : {
+      "@id" : "http://peakyblinders.com/ontology#Mob"
+    },
+    "childOf" : {
+      "@id" : "http://peakyblinders.com/ontology#childOf",
+      "@type" : "@id"
+    },
+    "riddenBy" : {
+      "@id" : "http://peakyblinders.com/ontology#riddenBy",
+      "@type" : "@id"
+    },
+    "Cap" : {
+      "@id" : "http://peakyblinders.com/ontology#Cap"
+    },
+    "City" : {
+      "@id" : "http://peakyblinders.com/ontology#City"
+    },
+    "memberOf" : {
+      "@id" : "http://peakyblinders.com/ontology#memberOf",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Horse" : {
+      "@id" : "http://peakyblinders.com/ontology#Horse"
+    },
+    "cities" : {
+      "@id" : "http://peakyblinders.com/ontology#cities",
+      "@type" : "@id"
+    },
+    "habitants" : {
+      "@id" : "http://peakyblinders.com/ontology#habitants",
+      "@type" : "@id"
+    },
+    "Season" : {
+      "@id" : "http://peakyblinders.com/ontology#Season"
+    },
+    "starring" : {
+      "@id" : "http://peakyblinders.com/ontology#starring",
+      "@type" : "@id"
+    },
+    "hiddenIn" : {
+      "@id" : "http://peakyblinders.com/ontology#hiddenIn",
+      "@type" : "@id"
+    },
+    "isFinished" : {
+      "@id" : "http://peakyblinders.com/ontology#isFinished",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    }
+  }
+}
